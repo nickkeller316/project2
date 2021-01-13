@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS csvList;
-CREATE DATABASE csvList;
+DROP DATABASE IF EXISTS employee_list;
+CREATE DATABASE employee_list;
