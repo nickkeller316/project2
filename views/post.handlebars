@@ -1,31 +1,53 @@
-<div class="form-wrap">
-    <h1>Add A Gig</h1>
-    <p>Your contact email will be shared with registered users to apply to your gig</p>
-    <form>
-        <div class="input-group">
-            <label for="title">Gig Title</label>
-            <input type="text" name="title" id="title" class="input-box"
-                placeholder="eg. Small Wordpress website, React developer" maxlength="100" required>
+<div class="container">
+    <div class="row">
+        <div class="col l6">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <div class="form-wrap">
+                        {{#each errors}}
+                        <div class="error">
+                            <p>{{text}}</p>
+                        </div>
+                        {{/each}}
+                        <form>
+                            <div class="input-group">
+                                <label for="project_name" style="color:white">Project Name</label>
+                                <input type="text" name="project_name" id="project_name" class="input-box"
+                                    placeholder="Add Project Name" maxlength="100" style="font-size: x-small">
+                            </div>
+                            <div class="input-group">
+                                <label for="project_status" style="color:white">Project Status</label>
+                                <input type="text" name="project_status" id="project_status" class="input-box"
+                                    placeholder="Add Project Status of New, Active, Hold, or Complete" maxlength="100"
+                                    style="font-size: x-small">
+                            </div>
+                            <div class="input-group">
+                                <label for="project_manager" style="color:white">Project Manager</label>
+                                <input type="text" name="project_manager" id="project_manager" class="input-box"
+                                    placeholder="Add Project Manager" maxlength="100" style="font-size: x-small">
+                            </div>
+                            <div class="input-group">
+                                <label for="percent_complete" style="color:white">Percent Complete</label>
+                                <input type="text" name="percent_complete" id="percent_complete" class="input-box"
+                                    placeholder="Add Percent Complete" maxlength="100" style="font-size: x-small">
+                            </div>
+                            <div class="input-group">
+                                <label for="start_date" style="color:white">Start Date</label>
+                                <input type="text" name="start_date" id="start_date" class="input-box"
+                                    placeholder="Add Start Date" maxlength="100" style="font-size: x-small">
+                            </div>
+                            <div class="input-group">
+                                <label for="due_date" style="color:white">Due Date</label>
+                                <input type="text" name="due_date" id="due_date" class="input-box"
+                                    placeholder="Add Due Date" maxlength="100" style="font-size: x-small">
+                            </div>
+                            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="input-group">
-            <label for="technologies">Technologies Needed</label>
-            <input type="text" name="technologies" id="technologies" class="input-box"
-                placeholder="eg. javascript, react, PHP" maxlength="100">
-        </div>
-        <div class="input-group">
-            <label for="budget">Budget (Leave blank for unknown)</label>
-            <input type="number" name="budget" id="budget" class="input-box" placeholder="eg. 500, 5000, 10000">
-        </div>
-        <div class="input-group">
-            <label for="description">Gig Description</label>
-            <textarea name="description" id="description" class="input-box"
-                placeholder="Describe the details of the gig" rows="10" required></textarea>
-        </div>
-        <div class="input-group">
-            <label for="budget">Contact Email</label>
-            <input type="email" name="contact_email" id="contactemail" class="input-box" placeholder="Enter an email"
-                required>
-        </div>
-        <input type="submit" value="Add Gig" class="btn btn-reverse">
-    </form>
+    </div>
 </div>

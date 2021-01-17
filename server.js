@@ -19,8 +19,12 @@ app.use(express.static("public"));
 
 // - Sets handlebars
 const exphbs = require('express-handlebars');
+const bodyParser = require('body-parser');
 app.engine("handlebars", exphbs({ defaultLayout: "main", handlebars: allowInsecurePrototypeAccess(Handlebars) }));
 app.set("view engine", "handlebars");
+
+// Body Parser
+// app.use(bodyParser.urlencoded({ extended: false}));
 
 // Routes
 require('./routes/project-api-routes.js')(app);
