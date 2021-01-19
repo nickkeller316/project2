@@ -23,18 +23,27 @@ module.exports = (app) => {
   app.get('/post', (req, res) => res.render('post'));
 
   app.post('/post', (req, res) => {
-    console.log(req.body.project_name);
       db.Project.create({
         project_name: req.body.project_name,
         project_status: req.body.project_status,
-        project_manager: req.body.project_managert,
+        project_manager: req.body.project_manager,
         percent_complete: req.body.percent_complete,
         start_date: req.body.start_date,
         due_date: req.body.due_date,
-      }).then((project) => 
-      res.json(project));
-      res.redirect('/all');
-  })
+      }).then((data) => 
+      res.json(data));
+      res.redirect('/');
+  });
+
+  // app.delete('/all/:id', (req, res) => {
+  //   // Use the sequelize destroy method to delete a record from our table with the
+  //   // id in req.params.id. res.json the result back to the user
+  //     db.Project.destroy({
+  //       where: {
+  //         id: req.params.id,
+  //       },
+  //     }).then(() => res.end());
+  // });
 
   // app.post('/post', (req, res) => {
   //   const { project_name, project_status, project_manager, percent_complete, start_date, due_date} = req.body;
