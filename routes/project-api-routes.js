@@ -35,15 +35,19 @@ module.exports = (app) => {
       res.redirect('/');
   });
 
-  // app.delete('/all/:id', (req, res) => {
-  //   // Use the sequelize destroy method to delete a record from our table with the
-  //   // id in req.params.id. res.json the result back to the user
-  //     db.Project.destroy({
-  //       where: {
-  //         id: req.params.id,
-  //       },
-  //     }).then(() => res.end());
-  // });
+  app.delete('/all/:id', (req, res) => {
+    // Use the sequelize destroy method to delete a record from our table with the
+    // id in req.params.id. res.json the result back to the user
+    const test = req.params.id;
+    console.log(test);
+    
+    db.Project.destroy({
+        where: {
+          id: req.params.id,
+        },
+      }).then(() => res.end());
+      res.redirect('/');
+  });
 
   // app.post('/post', (req, res) => {
   //   const { project_name, project_status, project_manager, percent_complete, start_date, due_date} = req.body;

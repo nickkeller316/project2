@@ -6,17 +6,17 @@
                 <div class="card-content white-text">
                     <span class="left card-title">{{project_name}}</span>
                     <div class="row right">
-                        <p>Project Status: {{project_status}}</p>
-                        <p>Project Manager: {{project_manager}}</p>
+                        <p>{{project_status}}</p>
                     </div>
                     <br>
                     <div class="row">
+
                         <div class="col l12">
                             <p>Percent complete: {{percent_complete}}</p>
                         </div>
-                        {{!-- <div class="col l12">
-                            <p>Start Date: {{start_date}}</p>
-                        </div> --}}
+                        <div class="col l12">
+                            <p>Project Manager: {{project_manager}}</p>
+                        </div>
                         <div class="col l12">
                             <p>Due Date: {{due_date}}</p>
                         </div>
@@ -24,6 +24,11 @@
                             <p>Completion Date: {{completion_date}}</p>
                         </div> --}}
                     </div>
+                    {{!-- <p>
+                    <form method="POST" action="{{this.id}}?_method=DELETE">
+                        <button type="submit">Delete</button>
+                    </form>
+                    </p> --}}
                 </div>
             </div>
         </div>
