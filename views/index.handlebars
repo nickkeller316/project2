@@ -1,10 +1,8 @@
-<h1>All Projects</h1>
-
 <div class="container">
     <div class="row">
         {{#each Projects}}
         <div class="col l4">
-            <div class="card blue-grey darken-1">
+            <div class="card grey darken-2">
                 <div class="card-content white-text">
                     <span class="left card-title">{{project_name}}</span>
                     <div class="row right">
@@ -16,15 +14,15 @@
                         <div class="col l12">
                             <p>Percent complete: {{percent_complete}}</p>
                         </div>
-                        <div class="col l12">
+                        {{!-- <div class="col l12">
                             <p>Start Date: {{start_date}}</p>
-                        </div>
+                        </div> --}}
                         <div class="col l12">
                             <p>Due Date: {{due_date}}</p>
                         </div>
-                        <div class="col l12">
+                        {{!-- <div class="col l12">
                             <p>Completion Date: {{completion_date}}</p>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
