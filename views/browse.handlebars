@@ -1,0 +1,45 @@
+{{!-- <section id="search" class="search-wrap">
+    <h1>Search for a Project</h1>
+    <form action="/browse" class="search-form">
+        <i class="fas fa-search"></i>
+        <input type="search" name="term" placeholder="Project">
+        <input type="submit" value="Search">
+    </form>
+</section> --}}
+{{!--
+<div class="container">
+    <div class="row">
+        <div class="col l12">
+            <div class="card grey darken-2">
+                <div class="card-content white-text">
+                    <form action="browse" class="search-form">
+                        {{!-- <i class="fas fa-search"></i> --}}
+                        <input type="search" name="term" placeholder="Project">
+                        <input type="submit" value="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> --}}
+
+<div class="container">
+    <div class="row">
+        <div class="col l12">
+            <div class="card grey darken-2">
+                <div class="card-content white-text">
+                    <div class="form-wrap">
+                        <form method="POST" action="/post">
+                            <div class="input-group">
+                                <label for="project_name" style="color:white">Project Name</label>
+                                <input type="text" name="project_name" id="project_name_1" class="input-box"
+                                    placeholder="Add Project Name" maxlength="100" style="font-size: x-small">
+                            </div>
+                            <button type="submit" class="btn btn-success submit grey darken-4">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
