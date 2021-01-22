@@ -1,6 +1,6 @@
 body {
   background-image: url("../img/background1.jpg");
-  background-position: center;
+  background-position: fill;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.95;
@@ -15,4 +15,8 @@ body {
 
 .logo {
   height: 70px;
+}
+
+.find {
+  margin-top: 100px;
 }

@@ -1,10 +1,12 @@
 // Requiring our models
 const db = require('../models');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 // Routes
 module.exports = (app) => {
 
-  app.get('/', (req, res) => res.redirect('/all'));
+  app.get('/findProject', (req, res) => res.redirect('/findProject'));
 
 
   // GET route for getting all of the todos
@@ -21,6 +23,17 @@ module.exports = (app) => {
   });
 
   app.get('/post', (req, res) => res.render('post'));
+
+  app.get('/findProject', (req, res) => res.render('findProject'));
+
+  //Search for projects
+  // app.get('/findProject', (req, res) => {
+  //   const { term } = req.query;
+  //   console.log(term);
+  //   // db.Project.findAll({ where: { project_name: { [Op.like]: '%' + term + '%'}}})
+  //   //   .then(projects => res.render('index', { projects }))
+  //   //   .catch(err => console.log(err));
+  // });
 
   app.post('/post', (req, res) => {
       db.Project.create({
